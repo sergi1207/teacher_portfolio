@@ -16,12 +16,17 @@ permalink: /data/database
     <th>Name</th>
     <th>ID</th>
     <th>Age</th>
+    <th>Hobby</th>
   </tr>
   </thead>
   <tbody id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
+
+<a href="http://127.0.0.1:4100/teacher_portfolio//2023/12/19/CSP_login_project_IPYNB_2_.html">Edit Account</a>
+
+<a href="http://127.0.0.1:4100/teacher_portfolio//2023/12/08/CSP-safe_computing.html">Delete Account</a>
 
 <!-- 
 Below JavaScript code fetches user data from an API and displays it in a table. It uses the Fetch API to make a GET request to the '/api/users/' endpoint.   Refer to config.js to see additional options. 
@@ -62,14 +67,17 @@ The script is laid out in a sequence (no function) and will execute when page is
             const name = document.createElement("td");
             const id = document.createElement("td");
             const age = document.createElement("td");
+            const hobby = document.createElement("td");
             // data is specific to the API
             name.innerHTML = row.name; 
             id.innerHTML = row.uid; 
             age.innerHTML = row.age; 
+            hobby.innerHTML = row.hobby;
             // this builds td's into tr
             tr.appendChild(name);
             tr.appendChild(id);
             tr.appendChild(age);
+            tr.appendChild(hobby);
             // append the row to table
             resultContainer.appendChild(tr);
           }
